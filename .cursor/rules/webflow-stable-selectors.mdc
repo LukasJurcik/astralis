@@ -1,0 +1,5 @@
+---
+description: When writing JS or GSAP that targets Webflow elements, use data-attributes or classes you control. Avoid relying on auto-generated wrapper classes (e.g. w-dyn-*, w-embed, internal divs) that can change on republish or restructure.
+globs:
+alwaysApply: true
+---

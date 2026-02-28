@@ -1,0 +1,5 @@
+---
+description: Use custom code for behavior, animations, and dynamic content—not for structural layout or styling the Designer can do. Avoid CSS/JS that duplicates or overrides layout (grid, flex, spacing) you can set in the Designer; exceptions are dynamic values (e.g. JS-calculated positions).
+globs:
+alwaysApply: true
+---

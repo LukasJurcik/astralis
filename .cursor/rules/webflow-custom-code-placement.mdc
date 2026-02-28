@@ -1,0 +1,5 @@
+---
+description: When suggesting custom code for Webflow, always specify placement (Site settings → Custom code: Head or Footer, or Page settings → Custom code) and scope (site-wide vs that page only). Prefer one script/code block when possible; avoid duplicating the same script in multiple places.
+globs:
+alwaysApply: true
+---

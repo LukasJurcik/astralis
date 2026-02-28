@@ -1,0 +1,5 @@
+---
+description: Use vanilla JS and GSAP only. Do not add jQuery, npm packages, frameworks, or heavy libraries. Keep scripts lightweight and dependency-free.
+globs:
+alwaysApply: true
+---
