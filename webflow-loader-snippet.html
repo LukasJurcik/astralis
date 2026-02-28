@@ -1,0 +1,26 @@
+<!--
+  Paste this in Webflow: Site settings → Custom code → Footer (or Head).
+  Loads main.js from fxtun tunnel when running, else from jsDelivr (GitHub).
+-->
+<script>
+(() => {
+  const DEV_URL  = "https://astralis.fxtun.dev/main.js";
+  const CDN_URL  = "https://cdn.jsdelivr.net/gh/LukasJurcik/astralis@main/main.js";
+
+  const script = document.createElement("script");
+  script.defer = true;
+  script.src = DEV_URL + "?t=" + Date.now();
+
+  script.onload = () => console.log("[dev] Loaded JS from fxtun tunnel");
+  script.onerror = () => {
+    console.log("[prod] Tunnel unavailable, loading from CDN");
+    const fallbackScript = document.createElement("script");
+    fallbackScript.src = CDN_URL + "?t=" + Date.now();
+    fallbackScript.defer = true;
+    fallbackScript.onload = () => console.log("[prod] CDN JS loaded");
+    document.head.appendChild(fallbackScript);
+  };
+
+  document.head.appendChild(script);
+})();
+</script>
